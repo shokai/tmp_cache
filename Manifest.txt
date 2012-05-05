@@ -3,7 +3,6 @@ Manifest.txt
 README.rdoc
 Rakefile
 lib/tmp_cache.rb
-lib/tmp_cache/cache.rb
 script/console
 script/destroy
 script/generate

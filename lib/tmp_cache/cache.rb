@@ -4,14 +4,18 @@ module TmpCache
     def self.cache
       @@cache ||= Hash.new{|h,k| h = {:expire => 0, :value => nil}}
     end
-    
-    def self.set(key, value, expire=60)
-      cache[key] = {:value => value, :expire => Time.now.to_i+expire}
-      return value
+
+    def self.set(key, value, expire=nil)
+      cache[key] = {
+        :value => value,
+        :expire => expire ? Time.now.to_i+expire.to_i : nil
+      }
+      value
     end
-    
+
     def self.get(key)
-      if cache[key][:expire] < Time.now.to_i
+      c = cache[key]
+      if c[:expire] != nil and Time.now.to_i > c[:expire].to_i
         return cache[key][:value] = nil
       else
         return cache[key][:value]
