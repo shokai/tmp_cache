@@ -1,3 +1,7 @@
+=== 0.0.3 2012-05-05
+
+* GC before get Keys
+
 === 0.0.2 2012-05-05
 
 * fix expiration

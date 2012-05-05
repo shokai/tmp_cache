@@ -28,4 +28,10 @@ class TestTmpCache < Test::Unit::TestCase
   def test_values
     assert TmpCache.values == ['shokai']
   end
+
+  def test_gc
+    TmpCache.set('mail', 'hashimoto@shokai.org')
+    sleep 3
+    assert TmpCache.keys == ['mail']
+  end
 end
