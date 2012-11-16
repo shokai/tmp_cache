@@ -10,6 +10,11 @@ on memory cache.
 
 * gem install tmp_cache
 
+== REQUIREMENTS:
+
+* Ruby 1.8.7+
+* Ruby 1.9.3+
+
 == SYNOPSIS:
 
   #!/usr/bin/env ruby
@@ -34,10 +39,11 @@ create new cache
   cache.set('foo', 'bar')
   puts cache.get('foo')
 
-== REQUIREMENTS:
+== TEST:
 
-* Ruby 1.8.7+
-* Ruby 1.9.3+
+  % gem install bundler
+  % bundle install
+  % rake
 
 == LICENSE:
 
