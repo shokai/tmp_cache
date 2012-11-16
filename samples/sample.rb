@@ -1,8 +1,6 @@
 #!/usr/bin/env ruby
 require 'rubygems'
-
-## $:.push File.dirname(__FILE__)+'/../lib'
-
+$:.unshift File.expand_path '../lib', File.dirname(__FILE__)
 require 'tmp_cache'
 
 TmpCache.set('name', 'shokai', 2) # expire 2 sec
