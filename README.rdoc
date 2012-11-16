@@ -6,35 +6,38 @@
 
 on memory cache.
 
+== INSTALL:
+
+* gem install tmp_cache
+
 == SYNOPSIS:
 
-    #!/usr/bin/env ruby
-    require 'tmp_cache'
-    
-    TmpCache.set('name', 'shokai', 60) # expire 60 sec
-    
-    puts TmpCache.get('name') # => 'shokai'
-    sleep 61
-    puts TmpCache.get('name') # => nil
+  #!/usr/bin/env ruby
+  require 'tmp_cache'
+
+  TmpCache.set('name', 'shokai', 60) # expire 60 sec
+
+  puts TmpCache.get('name') # => 'shokai'
+  sleep 61
+  puts TmpCache.get('name') # => nil
+
+  TmpCache.set('name', 'shokai')
+  TmpCache.set('mail', 'hashimoto@shokai.org')
+  TmpCache.each do |k,v|
+    puts "#{k} => #{v}"
+  end
 
 
-    TmpCache.set('name', 'shokai')
-    TmpCache.set('mail', 'hashimoto@shokai.org')
-    TmpCache.each do |k,v|
-      puts "#{k} => #{v}"
-    end
+create new cache
 
+  cache = TmpCache::Cache.new
+  cache.set('foo', 'bar')
+  puts cache.get('foo')
 
 == REQUIREMENTS:
 
 * Ruby 1.8.7+
 * Ruby 1.9.3+
-
-
-== INSTALL:
-
-* gem install tmp_cache
-
 
 == LICENSE:
 
