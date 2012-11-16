@@ -6,7 +6,7 @@ require 'tmp_cache'
 TmpCache.set('name', 'shokai', 2) # expire 2 sec
 puts TmpCache.get('name') # => 'shokai'
 sleep 3
-puts TmpCache.get('name') # => nil
+puts TmpCache.get('name') || 'expired' # => nil
 
 
 TmpCache.set('name', 'shokai')
