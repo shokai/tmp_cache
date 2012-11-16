@@ -4,7 +4,7 @@ $:.unshift(File.dirname(__FILE__)) unless
 require 'tmp_cache/cache'
 
 module TmpCache
-  VERSION = '0.0.3'
+  VERSION = '0.1.0'
   include TmpCache::Prototype
 
   class Cache

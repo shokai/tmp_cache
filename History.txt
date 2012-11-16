@@ -1,3 +1,7 @@
+=== 0.1.0 2012-11-17
+
+* support mix-in Cache::Prototype
+
 === 0.0.3 2012-05-05
 
 * GC before get Keys
