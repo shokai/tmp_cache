@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tmp_cache (0.1.0)
+    tmp_cache (0.1.1)
 
 GEM
   remote: https://rubygems.org/
