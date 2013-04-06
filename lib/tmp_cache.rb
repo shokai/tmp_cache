@@ -1,10 +1,7 @@
-$:.unshift(File.dirname(__FILE__)) unless
-  $:.include?(File.dirname(__FILE__)) || $:.include?(File.expand_path(File.dirname(__FILE__)))
-
 require 'tmp_cache/cache'
+require 'tmp_cache/version'
 
 module TmpCache
-  VERSION = '0.1.0'
   include TmpCache::Prototype
 
   class Cache

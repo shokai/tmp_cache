@@ -1,3 +1,4 @@
-source :rubygems
-gem 'hoe'
-gem 'newgem'
+source 'https://rubygems.org'
+
+# Specify your gem's dependencies in tmp_cache.gemspec
+gemspec
