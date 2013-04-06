@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/test_helper.rb'
 
-class TestMixinClass < Test::Unit::TestCase
+class TestMixinClass < MiniTest::Unit::TestCase
 
   class MyCache
     include TmpCache::Prototype
@@ -12,6 +12,10 @@ class TestMixinClass < Test::Unit::TestCase
 
   def setup
     MyCache.set('name', 'shokai', 2)
+  end
+
+  def teardown
+    MyCache.reset
   end
 
   def test_class_method

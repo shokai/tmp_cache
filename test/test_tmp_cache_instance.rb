@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/test_helper.rb'
 
-class TestTmpCacheInstance < Test::Unit::TestCase
+class TestTmpCacheInstance < MiniTest::Unit::TestCase
 
   def setup
     @tmp_cache = TmpCache::Cache.new

@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/test_helper.rb'
 
-class TestMixinInstance < Test::Unit::TestCase
+class TestMixinInstance < MiniTest::Unit::TestCase
 
   class MyCache
     include TmpCache::Prototype

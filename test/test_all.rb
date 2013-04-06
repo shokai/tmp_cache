@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/test_helper.rb'
 
-class TestAll < Test::Unit::TestCase
+class TestAll < MiniTest::Unit::TestCase
 
   class MyCache
     include TmpCache::Prototype
@@ -14,6 +14,11 @@ class TestAll < Test::Unit::TestCase
     @cache.set('name', 'instance', 2)
     MyCache.set('name', 'class mix', 2)
     @my_cache.set('name', 'instance mix', 2)
+  end
+
+  def teardown
+    TmpCache.reset
+    MyCache.reset
   end
 
   def test_get

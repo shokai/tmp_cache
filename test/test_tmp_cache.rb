@@ -1,9 +1,13 @@
 require File.dirname(__FILE__) + '/test_helper.rb'
 
-class TestTmpCache < Test::Unit::TestCase
+class TestTmpCache < MiniTest::Unit::TestCase
 
   def setup
     TmpCache.set('name', 'shokai', 2)
+  end
+
+  def teardown
+    TmpCache.reset
   end
 
   def test_get
