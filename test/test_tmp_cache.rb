@@ -1,6 +1,6 @@
-require File.dirname(__FILE__) + '/test_helper.rb'
+require File.expand_path 'test_helper.rb', File.dirname(__FILE__)
 
-class TestTmpCache < MiniTest::Unit::TestCase
+class TestTmpCache < MiniTest::Test
 
   def setup
     TmpCache.set('name', 'shokai', 2)

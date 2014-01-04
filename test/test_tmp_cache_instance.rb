@@ -1,6 +1,6 @@
-require File.dirname(__FILE__) + '/test_helper.rb'
+require File.expand_path 'test_helper.rb', File.dirname(__FILE__)
 
-class TestTmpCacheInstance < MiniTest::Unit::TestCase
+class TestTmpCacheInstance < MiniTest::Test
 
   def setup
     @tmp_cache = TmpCache::Cache.new

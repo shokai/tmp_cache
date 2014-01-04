@@ -4,6 +4,8 @@ on memory cache.
 
 * https://github.com/shokai/tmp_cache
 
+![Travis-CI build status](https://travis-ci.org/shokai/tmp_cache.png)
+
 
 Installation
 ------------

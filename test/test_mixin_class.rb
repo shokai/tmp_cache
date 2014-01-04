@@ -1,6 +1,6 @@
-require File.dirname(__FILE__) + '/test_helper.rb'
+require File.expand_path 'test_helper.rb', File.dirname(__FILE__)
 
-class TestMixinClass < MiniTest::Unit::TestCase
+class TestMixinClass < MiniTest::Test
 
   class MyCache
     include TmpCache::Prototype
